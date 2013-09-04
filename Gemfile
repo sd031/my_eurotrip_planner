@@ -29,6 +29,11 @@ group :production do
   gem 'rails_12factor', '0.0.2' #used by Heroku to serve static assets such as images and stylesheets.
 end
 
+group :test do
+  gem 'selenium-webdriver', '~> 2.35.1'
+  gem 'capybara', '2.1.0'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
