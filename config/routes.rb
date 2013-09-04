@@ -1,4 +1,10 @@
 MyEurotripPlanner::Application.routes.draw do
+  resources :countries
+
+
+  resources :cities
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
