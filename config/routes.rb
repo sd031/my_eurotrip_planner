@@ -1,6 +1,8 @@
 MyEurotripPlanner::Application.routes.draw do
-  get "static_pages/about"
-  get "static_pages/contactus"
+  #root 'static_pages#about'
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/contactus', to: 'static_pages#contactus', via: 'get'
+
 
   resources :countries
 
