@@ -1,7 +1,23 @@
 <% provide(:title, 'About') %>
-<%= full_title(yield(:title)) %>
-<h1>StaticPages#about</h1>
-<p>We are a team of young people as excited as you about traveling to Europe.
-  We have been building a nice community with other travelers and Europe natives that help us enrich this site and provide you with the best alternatives to make your trip come true!
-  You are invited to join us either if you are planning your trip or you have just come back from it.... or if you just love this idea, please contact us!
-</p>
+
+<div class="center hero-unit">
+  <h1>StaticPages#about</h1>
+  <table>
+    <tr>
+      <td>
+        <h2>We are a team of young people as excited as you about traveling to Europe.
+          We have been building a nice community with other travelers and Europe natives that help us enrich this site
+          and
+          provide you with the best alternatives to make your trip come true!
+          You are invited to join us either if you are planning your trip or you have just come back from it.... or if
+          you
+          just love this idea, please <a href="/static_pages/contactus">Ruby on Rails Tutorial</a> contact us!
+        </h2>
+      </td>
+      <td>
+        <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+      </td>
+    </tr>
+  </table>
+  <%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
+</div>
