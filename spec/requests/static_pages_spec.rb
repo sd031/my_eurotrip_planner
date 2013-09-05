@@ -23,7 +23,7 @@ You are invited to join us either if you are planning your trip or you have just
         visit '/static_pages/contactus'
         expect(page).to have_content("Please, leave us your comment!")
       end
-  end
+    end
 
     it "should have the title Contact Us" do
       visit '/static_pages/contactus'

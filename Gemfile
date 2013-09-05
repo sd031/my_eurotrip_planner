@@ -8,6 +8,7 @@ gem 'rails', '3.2.14'
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-rspec', '2.5.0'
 end
 
 # Gems used only for assets and not required
@@ -32,6 +33,13 @@ end
 group :test do
   gem 'selenium-webdriver', '~> 2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'growl', '1.0.3'
+end
+
+group :development, :test do
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess'
 end
 
 # To use ActiveModel has_secure_password
