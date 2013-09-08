@@ -23,9 +23,47 @@ You are invited to join us either if you are planning your trip or you have just
   end
 
   describe "Contact Us page" do
-    before {visit contactus_path}
     let (:content) {"Please, leave us your comment!"}
     let(:page_title) { "Contact Us" }
+
+    let(:comment) { FactoryGirl.create(:comment) }
+    before {visit contactus_path(comment)}
+
     it_should_behave_like "all information pages"
+
+    it { should have_content(comment.name) }
+    it { should have_content(comment.email) }
+    it { should have_content(comment.comment) }
+  end
+
+    describe "Leave a comment page" do
+      let (:content) {"Please, leave us your comment!"}
+      let(:page_title) { "Leave us your comment" }
+      let(:comment) { FactoryGirl.create(:comment) }
+      before {visit comment_path(comment)}
+
+      it_should_behave_like "all information pages"
+
+      it { should have_content(comment.name) }
+      it { should have_content(comment.email) }
+      it { should have_content(comment.comment) }
+    end
+
+    describe "with invalid comment information" do
+      it "should not create a comment" do
+        expect { click_button submit }.not_to change(Comment, :count)
+      end
+    end
+
+    describe "with valid information" do
+      before do
+        fill_in "Name",         with: "Example User"
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Comment",      with: "comment"
+      end
+
+      it "should create a comment" do
+        expect { click_button submit }.to change(Comment, :count).by(1)
+      end
     end
 end

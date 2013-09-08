@@ -1,14 +1,16 @@
 MyEurotripPlanner::Application.routes.draw do
-  #root 'information_pages#about'
+  get "comments/new"
+
+  root to: 'information_pages#about'
   match '/about', to: 'information_pages#about', via: 'get'
   match '/contactus', to: 'information_pages#contactus', via: 'get'
+  #match '/comment', to: 'information_pages#comment', via: 'get'
   match '/itinerary', to: 'trips#itinerary', via: 'get'
   match '/home', to: 'trips#home', via: 'get'
 
   resources :countries
-
-
   resources :cities
+  #resources :comments
 
 
   # The priority is based upon order of creation:

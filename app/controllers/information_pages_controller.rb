@@ -3,5 +3,6 @@ class InformationPagesController < ApplicationController
   end
 
   def contactus
+    @comment = Comment.first
   end
 end
