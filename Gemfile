@@ -36,6 +36,7 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'growl', '1.0.3'
   gem 'factory_girl_rails', '4.2.1'
+  gem 'shoulda'
 end
 
 group :development, :test do

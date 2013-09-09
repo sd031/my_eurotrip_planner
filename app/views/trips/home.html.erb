@@ -1,6 +1,68 @@
 <% provide(:title, 'Home') %>
-<h1>Trip#home</h1>
-<p>￼Do you love traveling and planing your trips in advance?
-  Are you a middle age person planning your backpacker dream trip to Europe? Do you need some help on planning a trip adapted just to your preferences? Are you dizzy with the amount of information you have found about it?
-</p>
-<%= link_to "Show me my itinerary", itinerary_path, class: "btn btn-large btn-primary" %>
+<div class="center hero-unit">
+  <table>
+    <tr>
+      <td>
+          <ul id="nav">
+            <li><%= link_to "Home", home_path %></li>
+            <li><%= link_to "Itinerary", home_path %></li>
+            <li><%= link_to "Estimated costs", home_path %></li>
+            <li><%= link_to "Report", home_path %></li>
+          </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <ul>
+            <h2>
+              ￼Do you love traveling and planing your trips in advance?
+               Are you a middle age person planning your backpacker dream trip to Europe?
+               Do you need some help on planning a trip adapted just to your preferences?
+               Are you dizzy with the amount of information you have found about it?
+            </h2>
+          </ul>
+      <td>
+      <td>
+        <h2><%= image_tag("backpackers.jpg") %></h2>
+      </td>
+     </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <h2>Here we are to help you in this fantastic journey!
+          Do not waste more time, just answer us a couple of questions so we can start creating the best trip for you!
+          </h2>
+        </td>
+      </tr>
+    </table>
+    <table>
+    <div class="row">
+      <div class="row">
+        <div class="span6 offset3">
+          <%= form_for(@trip) do |form| %>
+
+              <%= form.label :start_date %>
+              <%= form.date_select :start_date, :order => [:day, :month, :year],
+                                   prompt: {day: 'Choose day', month: 'Choose month', year: 'Choose year'} %>
+
+              <%= form.label :end_date %>
+              <%= form.date_select :end_date, :order => [:day, :month, :year],
+                                   prompt: {day: 'Choose day', month: 'Choose month', year: 'Choose year'}%>
+
+              <%= form.label :europe_zone_id %>
+              <%= form.collection_select :europe_zone_id, EuropeZone.all, :id, :name %>
+
+              <%= form.label :transportation_preference_id %>
+              <%= form.collection_select :transportation_preference_id, TransportationPreference.all, :id, :name %>
+
+              <%= form.label :sighseeing_preference_id %>
+              <%= form.collection_select :sighseeing_preference_id, SightseeingPreference.all, :id, :name %>
+
+              <%= form.submit "Show me my itinerary", class: "btn btn-large btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    </table>
+</div>

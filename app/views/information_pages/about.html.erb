@@ -1,6 +1,19 @@
 <% provide(:title, 'About') %>
 <div class="center hero-unit">
-  <h1>StaticPages#about</h1>
+  <table>
+    <tr>
+      <td>
+        <ul id="nav">
+          <li><%= link_to "Home", home_path %></li>
+          <li><%= link_to "Itinerary", home_path %></li>
+          <li><%= link_to "Estimated costs", home_path %></li>
+          <li><%= link_to "Report", home_path %></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+<div class="center hero-unit">
   <table>
     <tr>
       <td>
@@ -14,8 +27,9 @@
         </h2>
       </td>
       <td>
-        <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+        <%= link_to image_tag("backpackers.jpg") %>
       </td>
     </tr>
   </table>
+</div>
 </div>

@@ -9,18 +9,6 @@ describe "Trip pages" do
     it { should have_content(content)}
     end
 
-  describe "Home page" do
-    before { visit home_path }
-    let (:content) { 'Do you love traveling and planing your trips in advance?
-    Are you a middle age person planning your backpacker dream trip to Europe?
-    Do you need some help on planning a trip adapted just to your preferences?
-    Are you dizzy with the amount of information you have found about it?'}
-    let (:page_title) { 'Home'}
-
-    it_should_behave_like "all trip pages"
-    it { should have_link("Show me my itinerary", href: itinerary_path)}
-  end
-
   describe "Itinerary page" do
     before { visit itinerary_path }
 
@@ -29,7 +17,14 @@ describe "Trip pages" do
     let (:page_title) {'Itinerary' }
     it_should_behave_like "all trip pages"
   end
+  #TODO: add tests for  it { should have_selector('h1', text: 'Contact') }
 
-  # add tests for  it { should have_selector('h1', text: 'Contact') }
+  describe "Estimated Costs page" do
+
+  end
+
+  describe "Report page" do
+
+  end
 end
 

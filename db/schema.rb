@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907053919) do
+ActiveRecord::Schema.define(:version => 20130909001048) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -34,6 +34,41 @@ ActiveRecord::Schema.define(:version => 20130907053919) do
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "europe_zone_countries", :force => true do |t|
+    t.integer  "europe_zone_id"
+    t.integer  "country_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "europe_zones", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sightseeing_preferences", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "transportation_preferences", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "trips", :force => true do |t|
+    t.string   "end_date"
+    t.integer  "europe_zone_id"
+    t.integer  "sighseeing_preference_id"
+    t.string   "start_date"
+    t.integer  "transportation_preference_id"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
 end
