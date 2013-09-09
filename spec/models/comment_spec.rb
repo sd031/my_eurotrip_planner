@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Comment do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of :name }
+  it { should validate_presence_of :comment }
+  it { should ensure_length_of(:name).is_at_most(60) }
 end
