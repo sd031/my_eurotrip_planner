@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130911182720) do
+ActiveRecord::Schema.define(:version => 20130911194109) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -22,18 +22,17 @@ ActiveRecord::Schema.define(:version => 20130911182720) do
   end
 
   create_table "cities_per_itineraries", :force => true do |t|
-    t.integer  "city_id"
-    t.integer  "itinerary_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.integer  "europe_zone"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "city_per_itinerary_per_europe_zones", :force => true do |t|
-    t.integer  "cities_per_itinerary_id"
+    t.integer  "city_id"
     t.integer  "europe_zone_id"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "itinerary_id"
+    t.integer  "trip_id"
   end
 
   create_table "countries", :force => true do |t|
@@ -75,10 +74,7 @@ ActiveRecord::Schema.define(:version => 20130911182720) do
   end
 
   create_table "trips", :force => true do |t|
-    t.string   "end_date"
-    t.integer  "europe_zone_id"
-    t.integer  "sighseeing_preference_id"
-    t.string   "start_date"
+    t.integer  "sightseeing_preference_id"
     t.integer  "transportation_preference_id"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false

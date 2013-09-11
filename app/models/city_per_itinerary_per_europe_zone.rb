@@ -1,6 +1,8 @@
 class CityPerItineraryPerEuropeZone < ActiveRecord::Base
-  attr_accessible :cities_per_itinerary_id, :europe_zone_id
+  attr_accessible :city_id, :itinerary_id, :europe_zone_id, :trip_id
 
-  belongs_to :cities_per_itinerary
+  belongs_to :city
   belongs_to :europe_zone
+  belongs_to :itinerary
+  belongs_to :trip
 end
