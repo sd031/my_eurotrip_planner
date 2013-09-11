@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 220px;
 }
 
 section {
@@ -35,7 +35,7 @@ textarea {
 .center {
   text-align: left;
   h1 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -79,8 +79,8 @@ p {
   font-weight: bold;
   line-height: 1;
   hover {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
   }
 }
 
@@ -92,7 +92,7 @@ footer {
   border-top: 1px solid #eaeaea;
   color: $lightGray;
   small {
-  float: right;
+    float: right;
   }
 }
 
@@ -162,8 +162,9 @@ input {
 
 #nav {
   background: #e5e5e5;
-  float: center;
-  margin: 0; padding: 0;
+  float: left;
+  margin: 0;
+  padding: 0;
   border: 1px solid white;
   border-bottom: none;
 }

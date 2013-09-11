@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+#http://ruby.railstutorial.org/
 describe ApplicationHelper do
 
   describe "full_title" do

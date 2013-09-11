@@ -1,6 +1,9 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
+      <%= image_tag("banner.jpg") %>
+    </div>
+    <div class="container">
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "About us", about_path %></li>
@@ -10,6 +13,14 @@
         </ul>
       </nav>
       <h1>Welcome to MyEuroTripPlanner!</h1>
+    </div>
+    <div class="container">
+      <ul id="nav">
+        <li><%= link_to "Home", home_path %></li>
+        <li><%= link_to "Itinerary", home_path %></li>
+        <li><%= link_to "Estimated costs", home_path %></li>
+        <li><%= link_to "Report", home_path %></li>
+      </ul>
     </div>
   </div>
 </header>

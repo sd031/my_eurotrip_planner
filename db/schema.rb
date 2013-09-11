@@ -11,22 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130909001048) do
+ActiveRecord::Schema.define(:version => 20130911053953) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
-    t.string   "description"
     t.integer  "country_id"
+    t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "comments", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "comment"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "cities_per_itineraries", :force => true do |t|
+    t.integer  "city_id"
+    t.integer  "itinerary_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "europe_zone"
+  end
+
+  create_table "cities_per_itinerary_per_zones", :force => true do |t|
+    t.integer  "city_id"
+    t.integer  "itinerary_id"
+    t.integer  "europe_zone_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "countries", :force => true do |t|
@@ -49,6 +57,12 @@ ActiveRecord::Schema.define(:version => 20130909001048) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "itineraries", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
   create_table "sightseeing_preferences", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -69,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20130909001048) do
     t.integer  "transportation_preference_id"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
+    t.integer  "length"
   end
 
 end

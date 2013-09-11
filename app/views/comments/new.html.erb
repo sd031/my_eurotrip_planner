@@ -23,33 +23,33 @@
       <td>
   </table>
   <table>
-        <div class="row">
-          <div class="row">
-            <div class="span6 offset3">
-              <%= form_for(@comment) do |form| %>
+    <div class="row">
+      <div class="row">
+        <div class="span6 offset3">
+          <%= form_for(@comment) do |form| %>
 
-                  <%= form.label :name %>
-                  <%= form.text_field :name %>
+              <%= form.label :name %>
+              <%= form.text_field :name %>
 
-                  <%= form.label :email %>
-                  <%= form.text_field :email %>
+              <%= form.label :email %>
+              <%= form.text_field :email %>
 
-                  <%= form.label :comment %>
-                  <%= form.text_field :comment %>
+              <%= form.label :comment %>
+              <%= form.text_field :comment %>
 
-                  <%= form.submit "Submit", class: "btn btn-large btn-primary" %>
-              <% end %>
-            </div>
-          </div>
+              <%= form.submit "Submit", class: "btn btn-large btn-primary" %>
+          <% end %>
         </div>
-        <div class="row">
-          <div class="span6 offset3">
-            <%= form_for(@comment) do |f| %>
-                <%= render 'shared/error_messages' %>
-            <% end %>
-          </div>
-        </div>
-      </td>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_for(@comment) do |f| %>
+            <%= render 'shared/error_messages' %>
+        <% end %>
+      </div>
+    </div>
+    </td>
     </tr>
   </table>
 </div>
