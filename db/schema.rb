@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130911053953) do
+ActiveRecord::Schema.define(:version => 20130911182720) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -29,12 +29,11 @@ ActiveRecord::Schema.define(:version => 20130911053953) do
     t.integer  "europe_zone"
   end
 
-  create_table "cities_per_itinerary_per_zones", :force => true do |t|
-    t.integer  "city_id"
-    t.integer  "itinerary_id"
+  create_table "city_per_itinerary_per_europe_zones", :force => true do |t|
+    t.integer  "cities_per_itinerary_id"
     t.integer  "europe_zone_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
   create_table "countries", :force => true do |t|

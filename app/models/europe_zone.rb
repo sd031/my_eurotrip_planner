@@ -3,4 +3,7 @@ class EuropeZone < ActiveRecord::Base
   has_many :europe_zone_countries
   has_many :countries, through: :europe_zone_countries
 
+  has_many :city_per_itinerary_per_europe_zones
+  has_many :cities_per_itineraries, through: :city_per_itinerary_per_europe_zones
+
 end
