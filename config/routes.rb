@@ -1,9 +1,8 @@
 MyEurotripPlanner::Application.routes.draw do
-  root to: 'information_pages#about'
+  root :to => 'trips#home'
   match '/about', to: 'information_pages#about', via: 'get'
   match '/contactus', to: 'information_pages#contactus', via: 'get'
   match '/temp', to: 'information_pages#temp', via: 'get'
-  match '/comment', to: 'comments#new', via: 'get'
   match '/itinerary', to: 'trips#itinerary', via: 'get'
   match '/home', to: 'trips#home', via: 'get'
 
@@ -61,7 +60,7 @@ MyEurotripPlanner::Application.routes.draw do
   #   end
 
   # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  # just remember to delete public/g.html.
   # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"

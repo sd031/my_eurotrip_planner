@@ -3,6 +3,8 @@ class CommentsController < ApplicationController
       @comment = Comment.new
     end
 
+  def index
+  end
   def create
       @comment = Comment.new(params[:comment])
       if @comment.save
@@ -12,4 +14,6 @@ class CommentsController < ApplicationController
       end
     end
 
+  def show
+  end
 end

@@ -5,7 +5,7 @@ class CountriesController < ApplicationController
     @countries = Country.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # g.html.erb
       format.json { render json: @countries }
     end
   end
