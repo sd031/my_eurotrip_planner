@@ -7,4 +7,6 @@ class EuropeZone < ActiveRecord::Base
   has_many :cities, through: :city_per_itinerary_per_europe_zones
   has_many :itineraries, through: :city_per_itinerary_per_europe_zones
 
+  has_one :trip
+
 end

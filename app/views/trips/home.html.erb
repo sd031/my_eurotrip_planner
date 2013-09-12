@@ -41,8 +41,8 @@
               <%= form.label :transportation_preference_id %>
               <%= form.collection_select :transportation_preference_id, TransportationPreference.all, :id, :name %>
 
-              <%= form.label :sighseeing_preference_id %>
-              <%= form.collection_select :sighseeing_preference_id, SightseeingPreference.all, :id, :name %>
+              <%= form.label :sightseeing_preference_id %>
+              <%= form.collection_select :sightseeing_preference_id, SightseeingPreference.all, :id, :name %>
 
               <%= form.submit "Show me my itinerary", class: "btn btn-large btn-primary" %>
           <% end %>
