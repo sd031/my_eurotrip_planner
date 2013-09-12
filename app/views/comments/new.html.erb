@@ -1,17 +1,6 @@
 <% provide(:title, 'Leave us your comment') %>
 <div class="center hero-unit">
-  <table>
-    <tr>
-      <td>
-        <ul id="nav">
-          <li><%= link_to "Home", home_path %></li>
-          <li><%= link_to "Itinerary", home_path %></li>
-          <li><%= link_to "Estimated costs", home_path %></li>
-          <li><%= link_to "Report", home_path %></li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+
   <table>
     <tr>
       <td>
@@ -22,6 +11,13 @@
       </td>
       <td>
   </table>
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_for(@comment) do |f| %>
+            <%= render 'shared/error_messages' %>
+        <% end %>
+      </div>
+     </div>
   <table>
     <div class="row">
       <div class="row">
@@ -42,14 +38,9 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="span6 offset3">
-        <%= form_for(@comment) do |f| %>
-            <%= render 'shared/error_messages' %>
-        <% end %>
-      </div>
-    </div>
+
     </td>
     </tr>
   </table>
+</div>
 </div>

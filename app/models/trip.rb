@@ -1,4 +1,4 @@
-class Trip < ActiveRecord::Base
+  class Trip < ActiveRecord::Base
   attr_accessible :sightseeing_preference_id, :transportation_preference_id,
                   :length, :europe_zone_id
 

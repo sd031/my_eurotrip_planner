@@ -1,0 +1,28 @@
+<% provide(:title, 'Itinerary') %>
+<div class="center hero-unit">
+  <section>
+    <h2>
+      ￼Awesome Created! We have found a nice option just for you! Actually this is the preferred route most people
+      followed!
+    </h2>
+  </section>
+  <section>
+    <aside>
+      <table border=1>
+        <tr>
+          <th>Trip origin</th>
+          <th>Trip destination</th>
+          <th>Days to stay</th>
+          <th>Transportation</th>
+        </tr>
+        <% @itineraries = @trip.europe_zone.itineraries.all %>
+        <% @itineraries.each do |it| %>
+            <tr>
+              <td><%= it.origin.name%></td>
+              <td><%= it.destination.name %></td>
+            </tr>
+        <%end%>
+      </table>
+    </aside>
+  </section>
+</div>

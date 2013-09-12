@@ -4,9 +4,6 @@ class TripsController < ApplicationController
   end
 
   def create
-    print @trip
-    if(Trip.exists?(params[:trip]))
-      redirect_to itinerary_path(:trip)
-    end
-    end
+    @trip = Trip.new(params[:trip])
+  end
 end
