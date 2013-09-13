@@ -17,7 +17,6 @@ FactoryGirl.define do
     comment.name "Michael Hartl"
     comment.email "michael@example.com"
     comment.comment "foobar"
-    comment.trip_id 1
   end
 
 #http://stackoverflow.com/questions/10032760/how-to-define-an-array-hash-in-factory-girl

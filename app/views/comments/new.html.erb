@@ -30,8 +30,8 @@
               <%= form.label :email %>
               <%= form.text_field :email %>
 
-              <%= form.label :trip_id %>
-              <%= form.collection_select :trip_id, Trip.all, :id, :name %>
+              <%= form.label "Trip" %>
+              <%= select_tag :trip_id, options_from_collection_for_select(Trip.all, :id, :name) , {:multiple => true}%>
 
               <%= form.label :comment %>
               <%= form.text_field :comment %>

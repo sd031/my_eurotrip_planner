@@ -11,9 +11,6 @@ describe "Comment Page" do
   describe "Leave a comment page" do
     let (:content) { "Please, leave us your comment!" }
     let(:page_title) { "Leave us your comment" }
-    #@trip = Trip.create!(length: 3, europe_zone_id: 1, sightseeing_preference_id: 2,
-    #                     transportation_preference_id: 1, name: "Backpacker - basic trip")
-
 
     it { should have_title(full_title(page_title)) }
     it { should have_content(content) }
@@ -30,7 +27,7 @@ describe "Comment Page" do
 
       fill_in "Name", with: comment.name
       fill_in "Email", with: comment.email
-      select(trip.name, from: "Trip")
+      select(trip.name, from: :trip_id)
       fill_in "Comment", with: comment.comment
     end
 
