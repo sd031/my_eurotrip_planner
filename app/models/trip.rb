@@ -3,5 +3,6 @@
                   :length, :europe_zone_id
 
   belongs_to :europe_zone
+  has_many :comments
 
 end

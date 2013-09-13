@@ -34,6 +34,7 @@ You are invited to join us either if you are planning your trip or you have just
     it { should have_content(content_for_comments) }
 
     #TODO: Add validation of comments information. Just tested in the browser as could not make this work.
+    #Add pagination. 9.34
     #it { should have_content(comments)}
 
   end

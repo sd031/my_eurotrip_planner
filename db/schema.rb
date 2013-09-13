@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130912203522) do
+ActiveRecord::Schema.define(:version => 20130912232451) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -89,5 +89,7 @@ ActiveRecord::Schema.define(:version => 20130912203522) do
     t.integer  "length"
     t.integer  "europe_zone_id"
   end
+
+  add_index "trips", ["europe_zone_id"], :name => "index_trips_on_europe_zone_id"
 
 end

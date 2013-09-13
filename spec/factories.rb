@@ -4,8 +4,13 @@ FactoryGirl.define do
     end_date "1"
     start_date "2"
     europe_zone_id 1
-    sighseeing_preference_id 2
+    sightseeing_preference_id 2
     transportation_preference_id 1
+  end
+
+  factory :europe_zone do
+    name "sample_zone"
+    trip
   end
 
   factory :comment do |comment|
