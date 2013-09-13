@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130912232451) do
+ActiveRecord::Schema.define(:version => 20130913162034) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20130912232451) do
     t.string   "comment"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "trip_id"
   end
 
   create_table "countries", :force => true do |t|
@@ -88,8 +89,11 @@ ActiveRecord::Schema.define(:version => 20130912232451) do
     t.datetime "updated_at",                   :null => false
     t.integer  "length"
     t.integer  "europe_zone_id"
+    t.string   "name"
   end
 
-  add_index "trips", ["europe_zone_id"], :name => "index_trips_on_europe_zone_id"
+  add_index "trips", ["length"], :name => "index_trips_on_length"
+  add_index "trips", ["sightseeing_preference_id"], :name => "index_trips_on_sightseeing_preference_id"
+  add_index "trips", ["transportation_preference_id"], :name => "index_trips_on_transportation_preference_id"
 
 end

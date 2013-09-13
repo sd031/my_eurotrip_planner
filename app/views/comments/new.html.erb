@@ -30,6 +30,9 @@
               <%= form.label :email %>
               <%= form.text_field :email %>
 
+              <%= form.label :trip_id %>
+              <%= form.collection_select :trip_id, Trip.all, :id, :name %>
+
               <%= form.label :comment %>
               <%= form.text_field :comment %>
 

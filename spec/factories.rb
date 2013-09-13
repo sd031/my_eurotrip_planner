@@ -1,11 +1,11 @@
 FactoryGirl.define do
 
   factory :trip do
-    end_date "1"
-    start_date "2"
+    length 3
     europe_zone_id 1
     sightseeing_preference_id 2
     transportation_preference_id 1
+    name "Backpacker - basic trip"
   end
 
   factory :europe_zone do
@@ -17,6 +17,7 @@ FactoryGirl.define do
     comment.name "Michael Hartl"
     comment.email "michael@example.com"
     comment.comment "foobar"
+    comment.trip_id 1
   end
 
 #http://stackoverflow.com/questions/10032760/how-to-define-an-array-hash-in-factory-girl
