@@ -21,20 +21,16 @@
   <table>
     <div class="row">
       <div class="row">
-        <div class="span6 offset3">
-          <%= form_for(@comment) do |form| %>
-
+        <div id = 'comments_form'class="span6 offset3">
+          <%= form_for(@comment, remote: true, :html => { :id => 'comments_form' } ) do |form| %>
               <%= form.label :name %>
               <%= form.text_field :name %>
 
               <%= form.label :email %>
               <%= form.text_field :email %>
 
-              <%= form.label "Trip" %>
-              <%= select_tag :trip_id, options_from_collection_for_select(Trip.all, :id, :name) , {:multiple => true}%>
-
               <%= form.label :comment %>
-              <%= form.text_field :comment %>
+              <%= form.text_area :comment %>
 
               <%= form.submit "Submit", class: "btn btn-large btn-primary" %>
           <% end %>

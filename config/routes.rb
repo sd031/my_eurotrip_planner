@@ -9,6 +9,7 @@ MyEurotripPlanner::Application.routes.draw do
   resources :countries
   resources :cities
   resources :comments
+  resources :comments_per_trips
   resources :trips
 
 

@@ -34,14 +34,20 @@
     <tr>
       <th>Name</th>
       <th>e-mail</th>
+      <th>Trip name</th>
       <th>comment</th>
     </tr>
     <% @comments.each do |data| %>
-        <tr>
-          <td><%= data.name %></td>
-          <td><%= data.email %></td>
-          <td><%= data.comment %></td>
-        </tr>
+        <% @trip_names =  ""%>
+        <%data.trips.each do |trip|%>
+            <% @trip_names += "\n * " + trip.name%>
+        <%end%>
+    <tr>
+      <td><%= data.name %></td>
+      <td><%= data.email %></td>
+        <td><%= simple_format @trip_names%></td>
+      <td><%= data.comment %></td>
+    </tr>
     <% end %>
   </table>
 </div>

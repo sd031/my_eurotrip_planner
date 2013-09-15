@@ -1,4 +1,4 @@
-class RemoveTripFromComments < ActiveRecord::Migration
+class RemoveIntegerFromCommentsPerTrips < ActiveRecord::Migration
   def up
     remove_column :comments, :integer
   end
