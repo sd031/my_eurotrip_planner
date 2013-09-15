@@ -1,45 +1,26 @@
 <% provide(:title, 'Leave us your comment') %>
 <div class="center hero-unit">
-
-  <table>
-    <tr>
-      <td>
-        <ul>
-          <h2>Please, leave us your comment!
-          </h2>
-        </ul>
-      </td>
-      <td>
-  </table>
-    <div class="row">
-      <div class="span6 offset3">
-        <%= form_for(@comment) do |f| %>
-            <%= render 'shared/error_messages' %>
-        <% end %>
-      </div>
-     </div>
-  <table>
-    <div class="row">
-      <div class="row">
-        <div id = 'comments_form'class="span6 offset3">
-          <%= form_for(@comment, remote: true, :html => { :id => 'comments_form' } ) do |form| %>
-              <%= form.label :name %>
-              <%= form.text_field :name %>
-
-              <%= form.label :email %>
-              <%= form.text_field :email %>
-
-              <%= form.label :comment %>
-              <%= form.text_area :comment %>
-
-              <%= form.submit "Submit", class: "btn btn-large btn-primary" %>
-          <% end %>
-        </div>
-      </div>
+    <h2>Please, leave us your comment!</h2>
+  <div class="row" border = 0>
+    <div id = 'errors_form'class="span6 offset3">
+      <%= form_for(@comment, remote: true) do |f| %>
+      <% end %>
     </div>
+  </div>
+  <div class="row">
+    <div id = 'comments_form'class="span6 offset3">
+      <%= form_for(@comment, remote: true ) do |form| %>
+          <%= form.label :name %>
+          <%= form.text_field :name %>
 
-    </td>
-    </tr>
-  </table>
-</div>
+          <%= form.label :email %>
+          <%= form.text_field :email %>
+
+          <%= form.label :comment %>
+          <%= form.text_area :comment %>
+
+          <%= form.submit "Submit", class: "btn btn-large btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 </div>

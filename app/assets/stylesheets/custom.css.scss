@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  padding-top: 310px;
+  padding-top: 260px;
 }
 
 section {
@@ -150,6 +150,7 @@ input {
   ul {
     list-style: none;
     margin: 0 0 36px 0;
+    border : none;
   }
 }
 
@@ -167,25 +168,23 @@ input {
   padding: 0;
   border: 1px solid white;
   border-bottom: none;
+  li a, li {
+   float: left;
+  }
+  li a {
+    padding: 1em 2em;
+    text-decoration: none;
+    color: white;
+    background: #292929;
+    background: -moz-linear-gradient(top, black, #3c3c3c 1px, #292929 25px);
+    background: -webkit-gradient(linear, left top, left 25, from(black), color-stop(4%, #3c3c3c), to(#292929));
+    border-right: 1px solid #3c3c3c;
+    border-left: 1px solid #292929;
+    border-bottom: 1px solid #232323;
+    border-top: 1px solid #545454;
+  }
 }
 
-#nav li a, #nav li {
-  float: left;
-}
-
-#nav li a {
-  padding: 1em 2em;
-  text-decoration: none;
-  color: white;
-  background: #292929;
-  background: -moz-linear-gradient(top, black, #3c3c3c 1px, #292929 25px);
-  background: -webkit-gradient(linear, left top, left 25, from(black), color-stop(4%, #3c3c3c), to(#292929));
-  border-right: 1px solid #3c3c3c;
-  border-left: 1px solid #292929;
-  border-bottom: 1px solid #232323;
-  border-top: 1px solid #545454;
-}
-
-#comments_form {
-
+#errors_form {
+  border:0;
 }

@@ -6,6 +6,4 @@ class Comment < ActiveRecord::Base
 
   #VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   #validates :email, format: { with: VALID_EMAIL_REGEX }
-  has_many :comments_per_trips
-  has_many :trips, through: :comments_per_trips
 end

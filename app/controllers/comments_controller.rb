@@ -3,19 +3,16 @@ class CommentsController < ApplicationController
       @comment = Comment.new
     end
 
-  def index
-  end
   def create
       @comment = Comment.new(params[:comment])
       if @comment.save
         respond_to do |format|
-          format.html { render 'new'  }
+          format.html {   }
           format.js
+          format.xml { render :xml => @comment}
         end
-      else
-        render 'new'
       end
-    end
+   end
 
   def show
   end
