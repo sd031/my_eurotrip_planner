@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  padding-top: 260px;
+  padding-top: 310px;
 }
 
 section {
@@ -56,6 +56,13 @@ h2 {
   font-size: 1.3em;
   letter-spacing: -1px;
   margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $lightGray;
+}
+
+h3 {
+  font-size: 1.4em;
   text-align: center;
   font-weight: normal;
   color: $lightGray;
@@ -131,6 +138,21 @@ aside {
   }
 }
 
+.left-column{
+  border:0;
+  width:50%;
+  float:left;
+}
+.right-column{
+  border:0;
+  width:50%;
+  float:right;
+}
+
+div{
+  padding:10px;
+  border:0;
+}
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -188,3 +210,5 @@ input {
 #errors_form {
   border:0;
 }
+
+.home section {width:100%;padding:20px 0;}
