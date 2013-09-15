@@ -73,24 +73,6 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  hover {
-    color: #fff;
-    text-decoration: none;
-  }
-}
-
 /* footer */
 
 footer {
@@ -190,6 +172,8 @@ input {
   padding: 0;
   border: 1px solid white;
   border-bottom: none;
+  width: 100%;
+  background: #292929;
   li a, li {
    float: left;
   }
@@ -210,5 +194,3 @@ input {
 #errors_form {
   border:0;
 }
-
-.home section {width:100%;padding:20px 0;}
