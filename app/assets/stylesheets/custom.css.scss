@@ -73,6 +73,11 @@ p {
   line-height: 1.7em;
 }
 
+th {
+  font-size: 0.8em;
+  line-height: 1.7em;
+}
+
 /* footer */
 
 footer {
@@ -120,6 +125,10 @@ aside {
   }
 }
 
+.map {
+  text-align:right;
+}
+
 .left-column{
   border:0;
   width:50%;
@@ -165,7 +174,7 @@ input {
 
 /* MENU */
 
-#nav {
+#site-nav {
   background: #e5e5e5;
   float: left;
   margin: 0;

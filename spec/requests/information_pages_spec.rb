@@ -4,7 +4,7 @@ describe "InformationPages" do
   subject { page }
 
   shared_examples_for "all information pages" do
-    it { should have_title(full_title_builder(page_title)) }
+    it { should have_title(full_title(page_title)) }
     it { should have_content(content) }
   end
 
@@ -17,7 +17,6 @@ You are invited to join us either if you are planning your trip or you have just
     let(:page_title) { "About" }
 
     it_should_behave_like "all information pages"
-
     #TODO: Improve this test to use the click_link method instead.
     it { should have_link('contact us!', href: contactus_path) }
   end
@@ -30,7 +29,7 @@ You are invited to join us either if you are planning your trip or you have just
     before { visit contactus_path() }
 
     it_should_behave_like "all information pages"
-    it { should have_link('Leave us a comment!', href: comment_path) }
+    it { should have_link('Leave us a comment!', href: new_comment_path) }
     it { should have_content(content_for_comments) }
 
     #TODO: Add validation of comments information. Just tested in the browser as could not make this work.

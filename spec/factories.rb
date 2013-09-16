@@ -2,16 +2,19 @@ FactoryGirl.define do
 
   factory :trip do
     length 3
-    europe_zone_id 1
+    #europe_zone FactoryGirl.create(:europe_zone)
     sightseeing_preference_id 2
     transportation_preference_id 1
     name "Backpacker - basic trip"
+    itineraries {[FactoryGirl.create(:itinerary)]}
   end
 
-  factory :europe_zone do
-    name "sample_zone"
-    trip
+  factory :itinerary do
+    name "Sample Europe"
+    origin_id 1
+    destination_id 1
   end
+
 
   factory :comment do |comment|
     comment.name "Michael Hartl"

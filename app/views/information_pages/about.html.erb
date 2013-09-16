@@ -1,33 +1,17 @@
 <% provide(:title, 'About') %>
 <div class="center hero-unit">
-  <table>
-    <tr>
-      <td>
-        <ul id="nav">
-          <li><%= link_to "Home", home_path %></li>
-          <li><%= link_to "Itinerary", home_path %></li>
-          <li><%= link_to "Estimated costs", home_path %></li>
-          <li><%= link_to "Report", home_path %></li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <div class="center hero-unit">
     <table>
       <tr>
         <td>
-          <h2>We are a team of young people as excited as you about traveling to Europe.
-            We have been building a nice community with other travelers and Europe natives that help us enrich this site
-            and
-            provide you with the best alternatives to make your trip come true!
-            You are invited to join us either if you are planning your trip or you have just come back from it.... or if
-            you
-            just love this idea, please <%= link_to "contact us!", contactus_path %>
-          </h2>
+          <h3>We are a team of young people as excited as you about traveling to Europe.</h3>
+          <h3>  We have been building a nice community with other travelers and Europe natives that help us enrich this site
+            and provide you with the best alternatives to make your trip come true! </h3>
+          <h3>You are invited to join us either if you are planning your trip or you have just come back from it.... or if
+            you just love this idea, please <%= link_to "contact us!", contactus_path %>
+          </h3>
         </td>
         <td>
-          <%= link_to image_tag("backpackers.jpg") %>
+          <%= link_to image_tag("backpackers.jpg", :size =>"850x750" ) %>
         </td>
       </tr>
     </table>

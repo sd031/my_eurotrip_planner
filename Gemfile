@@ -41,6 +41,7 @@ group :test do
   gem 'growl', '1.0.3'
   gem 'factory_girl_rails', '4.2.1'
   gem 'shoulda'
+  gem 'launchy'
 end
 
 group :development, :test do

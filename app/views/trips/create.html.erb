@@ -1,28 +1,43 @@
 <% provide(:title, 'Itinerary') %>
 <div class="center hero-unit">
-  <section>
     <h2>
       ￼Awesome Created! We have found a nice option just for you! Actually this is the preferred route most people
       followed!
     </h2>
-  </section>
-  <section>
-    <aside>
-      <table border=1>
-        <tr>
-          <th>Trip origin</th>
-          <th>Trip destination</th>
-          <th>Days to stay</th>
-          <th>Transportation</th>
-        </tr>
-        <% @itineraries = @trip.europe_zone.itineraries.all %>
-        <% @itineraries.each do |it| %>
+    <table>
+      <tr>
+        <td>
+          <table class="table table-bordered">
             <tr>
-              <td><%= it.origin.name%></td>
-              <td><%= it.destination.name %></td>
+              <th>Trip origin</th>
+              <th>Trip destination</th>
+              <th>Days to stay</th>
+              <th>Transportation</th>
             </tr>
-        <%end%>
-      </table>
-    </aside>
-  </section>
+            <% @itineraries = @trip.europe_zone.itineraries.all %>
+            <% @itineraries.each do |it| %>
+                <tr>
+                  <td><%= link_to it.origin.name, "#"%></td>
+                  <td><%= link_to it.destination.name, "#" %></td>
+                  <td><%= it.days_to_stay %></td>
+                  <td><%= it.transportation %></td>
+                </tr>
+            <%end%>
+          </table>
+        </td>
+        <td>
+          <!--http://www.history-map.com/picture/001/Europe-Map.htm-->
+          <aside>
+            <%= image_tag("EuropeMap.jpg", :size =>"360x190", :align =>"center", :class => "map") %>
+          </aside>
+        </td>
+      </tr>
+    </table>
+      <div>
+        <ul id="site-nav">
+          <li><%= link_to "Basic Information", "#" %></li>
+          <li><%= link_to "Where to stay", "#" %></li>
+          <li><%= link_to "Where and what to eat", "#" %></li>
+        </ul>
+      </div>
 </div>

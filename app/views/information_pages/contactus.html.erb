@@ -1,19 +1,6 @@
 <% provide(:title, 'Contact Us') %>
-<div class="center hero-unit">
-  <table>
-    <tr>
-      <td>
-        <ul id="nav">
-          <li><%= link_to "Home", home_path %></li>
-          <li><%= link_to "Itinerary", home_path %></li>
-          <li><%= link_to "Estimated costs", home_path %></li>
-          <li><%= link_to "Report", home_path %></li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-  <table>
-    <h2>We will be very glad to hearing from you!</h2>
+<h2>We will be very glad to hearing from you!</h2>
+<table class = "center">
     <tr>
       <td>
         <ul>
@@ -23,27 +10,33 @@
         </ul>
       </td>
       <td>
-        <h2><%= image_tag("backpackers.jpg") %></h2>
+        <h2><%= image_tag("backpackers.jpg", :size =>"450x350") %></h2>
       </td>
     </tr>
-  </table>
-  <table border=1>
-    <h2>Do you want to see what others have been saying? You are also welcome to
-      <%= link_to "Leave us a comment!", new_comment_path %></li>
-    </h2>
-    <tr>
-      <th>Name</th>
-      <th>e-mail</th>
-      <th>comment</th>
-    </tr>
-    <% @comments.each do |data| %>
-    <tr>
-      <td><%= data.name %></td>
-      <td><%= data.email %></td>
-      <td><%= data.comment %></td>
-    </tr>
-    <% end %>
-  </table>
+</table>
+<h2>Do you want to see what others have been saying? You are also welcome to
+  <%= link_to "Leave us a comment!", new_comment_path %></li>
+</h2>
+<div class="row">
+  <div class="row">
+    <div class="span6 offset3" id= "trip-detail">
+          <table class="table table-bordered">
+            <tr>
+              <th>Name</th>
+              <th>e-mail</th>
+              <th>comment</th>
+            </tr>
+            <% @comments.each do |data| %>
+            <tr>
+              <td><%= data.name %></td>
+              <td><%= data.email %></td>
+              <td><%= data.comment %></td>
+            </tr>
+            <% end %>
+          </table>
+    </div>
+  </div>
+</div>
 </div>
 
 

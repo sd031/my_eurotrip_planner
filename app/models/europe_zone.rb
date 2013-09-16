@@ -8,5 +8,6 @@ class EuropeZone < ActiveRecord::Base
   has_many :itineraries, through: :city_per_itinerary_per_europe_zones
 
   has_one :trip
+  validates :name, :uniqueness => true
 
 end
